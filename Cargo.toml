@@ -1,0 +1,19 @@
+[package]
+authors = ["Ben Greene"]
+name = "rusty-snakeskin"
+version = "0.1.0"
+description = "Wrap a python app inside a rust runtime"
+edition = "2018"
+
+[dependencies]
+pyo3 = { version = "0.14" }
+pyo3-asyncio = {  version = "0.14", features = ["attributes", "tokio-runtime"] }
+tokio = "1.9"
+env_logger = "0.9.0"
+log = {version = "0.4.14", features = ["release_max_level_warn"]}
+
+
+#[lib]
+#name = "setuptools_rust_starter"
+#crate-type = ["cdylib"]
+
