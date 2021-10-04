@@ -508,6 +508,7 @@ name = "rusty-snakeskin"
 version = "0.1.0"
 dependencies = [
  "env_logger",
+ "futures",
  "log",
  "pyo3",
  "pyo3-asyncio",
