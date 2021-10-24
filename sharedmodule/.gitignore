@@ -1,0 +1,11 @@
+# C
+*.so
+
+# Rust
+target/
+
+# Python
+venv/
+__pycache__
+*.egg-info
+*.egg

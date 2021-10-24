@@ -1,0 +1,19 @@
+[package]
+authors = ["PyO3 Authors"]
+name = "service-module"
+version = "0.1.0"
+description = "An example project to get started using PyO3 with maturin"
+edition = "2018"
+
+[dependencies]
+pyo3 = { version = "0.14", features = ["extension-module"] }
+pyo3-asyncio = {  version = "0.14", features = [ "tokio-runtime"] }
+aho-corasick = "0.7"
+tokio = "1.9"
+
+
+
+[lib]
+name = "service_module"
+crate-type = ["cdylib"]
+
