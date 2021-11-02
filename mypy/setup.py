@@ -14,7 +14,7 @@ setup(
         "Operating System :: MacOS :: MacOS X",
     ],
     packages=[
-        
+        "mypy"
     ],
     install_requires=[
         "asyncio"

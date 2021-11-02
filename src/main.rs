@@ -5,6 +5,7 @@
 use env_logger::Env;
 use log::{info};
 use pyo3::prelude::*;
+use pyo3::types::PyList;
 
 use futures::future::join_all;
 
@@ -28,9 +29,22 @@ async fn main() -> PyResult<()> {
     })?;
 
     let mut fut_list = Python::with_gil(|py| {
-        let startme = py.import("mypy.startme").expect("");
-        let sub0 = pyo3_asyncio::tokio::into_future(startme.call_method0("as_stop").expect("")).expect("");
-        let sub1 = pyo3_asyncio::tokio::into_future(startme.call_method0("as_start_loop").expect("")).expect("");
+        // let sys = py.import("sys").expect("");
+        // PyModule::import(py, "site");
+        let _helpme = py.import("site").unwrap();
+
+        let syspath: &PyList = py.import("sys")
+            .unwrap()
+            .getattr("path")
+            .unwrap()
+            .try_into()
+            .unwrap();
+
+        println!("The syspath is {}", syspath);
+
+        let mypy = py.import("mypy").expect("");
+        let sub0 = pyo3_asyncio::tokio::into_future(mypy.call_method0("as_stop").expect("")).expect("");
+        let sub1 = pyo3_asyncio::tokio::into_future(mypy.call_method0("as_start_loop").expect("")).expect("");
         // let retval = vec![sub0?, sub1?];
         // futures::future::join_all(vec![sub0, sub1])
         // Ok(vec![sub0, sub1])
@@ -64,4 +78,3 @@ async fn main() -> PyResult<()> {
 //     info!("Calling start");
 
 // }
-

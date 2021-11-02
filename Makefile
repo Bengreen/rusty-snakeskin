@@ -7,7 +7,8 @@ PYTEST:=venv/bin/pytest
 CARGO:=cargo
 
 venv:
-	python3 -m venv venv
+	# /opt/homebrew/opt/python@3.10/bin/python3.10 -m venv venv
+	/opt/homebrew/bin/python3 -m venv venv
 	${PIP} install wheel
 
 list: venv
@@ -17,20 +18,27 @@ clean:
 	@rm -rf venv
 	@rm -rf *.egg-info
 	@rm -rf .pytest_cache
-	find -iname "*.pyc" -delete
-	find -iname "__pycache__" -delete
+	find . -iname "*.pyc" -delete
+	find . -iname "__pycache__" -delete
 	${CARGO} clean
 
 build:
 	cargo build
 
-install: venv setup.py build
-	${PIP} install .
+venv/bin/activate.path: venv
+	@echo source venv/bin/activate.path to set PYTHONPATH
+	@${PYTHON} -c "import sys; print('export PYTHONPATH=', end=''); print(':'.join(sys.path[1:]))" > venv/bin/activate.path
+
+install: venv setup.py build venv/bin/activate.path
+	${PIP} install mypy
+
+mypy: venv mypy/setup.py
+	${PIP} install -e mypy[dev]
 
 ${PYTEST}: venv setup.py
-	${PIP} install -e .[dev]
+	${PIP} install -e mypy[dev]
 
-dev-install: ${PYTEST}
+dev-install: mypy
 
 status:
 	@${PYTHON} --version
