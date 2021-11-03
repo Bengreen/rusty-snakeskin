@@ -5,7 +5,7 @@
 use env_logger::Env;
 use log::{info};
 use pyo3::prelude::*;
-use pyo3::types::PyList;
+use pyo3::types::{PyList, PyTuple};
 
 use futures::future::join_all;
 
@@ -21,6 +21,19 @@ async fn main() -> PyResult<()> {
     //     // convert asyncio.sleep into a Rust Future
     //     pyo3_asyncio::tokio::into_future(startme.call_method0("as_start_loop")?)
     // })?;
+
+    Python::with_gil(|py| {
+        let shared = py.import("service_module").unwrap();
+
+        let uservice =  shared.getattr("UService").unwrap();
+        let args = PyTuple::new(py, &[7]);
+        let ben = uservice.call1(args).unwrap();
+        ben.call_method0("increment").unwrap();
+        ben.call_method0("increment").unwrap();
+        let retval = ben.getattr("value").unwrap();
+
+        println!("my value = {}", retval);
+    });
 
     let fut1 = Python::with_gil(|py| {
         let asyncio = py.import("asyncio")?;
