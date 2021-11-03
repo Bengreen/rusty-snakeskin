@@ -25,8 +25,7 @@ setup(
             )
         ],
     install_requires=[
-        "asyncclick",
-        "anyio"
+        'setuptools-rust @ git+https://github.com/PyO3/setuptools-rust',
     ],
     entry_points={
         'console_scripts': [
@@ -40,7 +39,10 @@ setup(
             'pytest>=3.5.0',
             'setuptools-rust @ git+https://github.com/PyO3/setuptools-rust',
             'pytest-aiohttp',
+        ],
+        'others': [
+            "asyncclick",
+            "anyio",
         ]
     }
 )
-

@@ -17,3 +17,5 @@ How can i load the rust program (binary -- probably static) and have it accessib
 Suggestion create a single shared object library that is available to both python and rust.
 
 
+When calling an embedded python from a python venv the embedded python is not expected to work out the PYTHONPATH in the same way that the interpreter does. Therefore it is necessary to provide PYTHONPATH to the embedded python so that it can correctly setup the sys.path (needed to find modules)
+Added notes here to describe: https://github.com/PyO3/pyo3/issues/1741

@@ -10,7 +10,6 @@
 use pyo3::{prelude::*};
 // , wrap_pyfunction, wrap_pymodule};
 
-
 #[pyclass]
 struct UService {
     #[pyo3(get, set)]
@@ -22,6 +21,11 @@ impl UService {
     #[new]
     pub fn new(value: i32) -> Self {
         UService { value }
+    }
+
+    pub fn increment(&mut self) -> PyResult<()> {
+        self.value+=1;
+        Ok(())
     }
 
     pub fn greetme(&self) -> &'static str {
