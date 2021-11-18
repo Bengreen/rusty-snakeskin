@@ -11,10 +11,12 @@ use futures::future::join_all;
 
 extern crate libc;
 
+#[link(name = "clibrary_test", kind = "dylib")]
 extern {
     fn from_the_library(a: u8, b: u8) -> u8;
 }
 
+#[link(name = "rust.cpython-39-darwin", kind = "dylib")]
 extern {
     fn add_to_count(inc: usize) -> usize;
 }
