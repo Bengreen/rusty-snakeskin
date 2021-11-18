@@ -18,7 +18,7 @@ setup(
     # packages=find_namespace_packages(include=["service_module.*"]),
     rust_extensions=[
         RustExtension(
-            "service_module.rust",
+            "service_module.librust",
             # path="Cargo.toml",
             binding=Binding.PyO3,
             # quiet=False,

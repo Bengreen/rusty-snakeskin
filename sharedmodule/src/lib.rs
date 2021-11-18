@@ -53,7 +53,7 @@ impl UService {
 
 
 #[pymodule]
-fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
+fn librust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<UService>()?;
     m.add_function(wrap_pyfunction!(add_to_count, m)?)?;
 

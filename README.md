@@ -29,3 +29,8 @@ https://stackoverflow.com/questions/61071884/how-to-call-a-shared-library-in-rus
 http://blog.asleson.org/2021/02/23/how-to-writing-a-c-shared-library-in-rust/
 
 * Add a C-Library to the build
+This is done and works nicely as part of the build and linkage steps
+Needs some special support using the build.rs file. It may be possible to replace this with directives for the extern declaration.
+
+## Rename of lib generated through python building process
+The file is directly created and not prepended with lib. This means it cannot be loaded by linker as linker is looking for a library starting wtih lib*.so
