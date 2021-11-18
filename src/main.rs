@@ -15,6 +15,9 @@ extern {
     fn from_the_library(a: u8, b: u8) -> u8;
 }
 
+extern {
+    fn add_to_count(inc: usize) -> usize;
+}
 
 #[pyo3_asyncio::tokio::main]
 async fn main() -> PyResult<()> {
@@ -22,7 +25,12 @@ async fn main() -> PyResult<()> {
 
 
     unsafe {
-        info!("Adding: {}", from_the_library(1, 2));
+        info!("from_the_library: {}", from_the_library(1, 2));
+    }
+
+    unsafe {
+        info!("add_to_count(3): {}", add_to_count(3));
+        info!("add_to_count(7): {}", add_to_count(7));
     }
 
     info!("Calling start");
@@ -45,6 +53,12 @@ async fn main() -> PyResult<()> {
         let retval = ben.getattr("value").unwrap();
 
         println!("my value = {}", retval);
+
+        let add_count = shared.getattr("add_to_count").unwrap();
+        let ben: usize = add_count.call1((19.into_py(py),)).unwrap().extract().unwrap();
+        info!("Py add_to_count got me {}", ben);
+        let ben: usize = add_count.call1((19.into_py(py),)).unwrap().extract().unwrap();
+        info!("Py add_to_count got me {}", ben);
     });
 
     let fut1 = Python::with_gil(|py| {

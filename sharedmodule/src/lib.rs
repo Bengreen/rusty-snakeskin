@@ -15,11 +15,12 @@ static mut COUNTER: usize = 0;
 
 
 #[pyfunction]
-fn add_to_count(inc: usize) -> usize {
-    unsafe {
-        COUNTER += inc;
-        COUNTER
-    }
+#[no_mangle]
+pub unsafe extern "C" fn add_to_count(inc: usize) -> usize {
+
+    COUNTER += inc;
+    COUNTER
+
 }
 
 

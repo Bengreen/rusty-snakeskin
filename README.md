@@ -26,5 +26,6 @@ https://coderedirect.com/questions/163022/linking-rust-application-with-a-dynami
 also consider
 
 https://stackoverflow.com/questions/61071884/how-to-call-a-shared-library-in-rust
+http://blog.asleson.org/2021/02/23/how-to-writing-a-c-shared-library-in-rust/
 
 * Add a C-Library to the build
