@@ -34,3 +34,12 @@ Needs some special support using the build.rs file. It may be possible to replac
 
 ## Rename of lib generated through python building process
 The file is directly created and not prepended with lib. This means it cannot be loaded by linker as linker is looking for a library starting wtih lib*.so
+
+## What is best approach
+
+Do we split the rust library into two parts. One that stays as rust and then layer a very light python layer on top to provide the relevant features.
+OR do we make a single library (using python) that does everything.
+
+Thinking ahead... python is just an example of a single language binding we require therefore the library itself should remain neutral to the binding to python.
+This implies to keep the python library very light and have it access the rust library.
+So the trick will be to pull the relevant rust API out into a seperate rust library build and then use that to generate a .so file. Then to create interfaces in rust to that library allowing it to be utillised by both the python API and the rust API.
