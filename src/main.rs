@@ -9,9 +9,21 @@ use pyo3::types::{PyList, PyTuple};
 
 use futures::future::join_all;
 
+extern crate libc;
+
+extern {
+    fn from_the_library(a: u8, b: u8) -> u8;
+}
+
+
 #[pyo3_asyncio::tokio::main]
 async fn main() -> PyResult<()> {
     env_logger::Builder::from_env(Env::default().default_filter_or("info")).init();
+
+
+    unsafe {
+        info!("Adding: {}", from_the_library(1, 2));
+    }
 
     info!("Calling start");
 

@@ -12,4 +12,5 @@ tokio = "1.9"
 env_logger = "0.9.0"
 log = {version = "0.4.14", features = ["release_max_level_warn"]}
 futures = "0.3.17"
-#service-module = { path = "sharedmodule" }
+service_module = { path = "sharedmodule" }
+libc = "*"

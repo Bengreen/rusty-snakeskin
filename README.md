@@ -19,3 +19,12 @@ Suggestion create a single shared object library that is available to both pytho
 
 When calling an embedded python from a python venv the embedded python is not expected to work out the PYTHONPATH in the same way that the interpreter does. Therefore it is necessary to provide PYTHONPATH to the embedded python so that it can correctly setup the sys.path (needed to find modules)
 Added notes here to describe: https://github.com/PyO3/pyo3/issues/1741
+
+## Linking to C Library
+https://coderedirect.com/questions/163022/linking-rust-application-with-a-dynamic-library-not-in-the-runtime-linker-search
+
+also consider
+
+https://stackoverflow.com/questions/61071884/how-to-call-a-shared-library-in-rust
+
+* Add a C-Library to the build

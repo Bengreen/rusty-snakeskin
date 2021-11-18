@@ -10,6 +10,19 @@
 use pyo3::{prelude::*};
 // , wrap_pyfunction, wrap_pymodule};
 
+
+static mut COUNTER: usize = 0;
+
+
+#[pyfunction]
+fn add_to_count(inc: usize) -> usize {
+    unsafe {
+        COUNTER += inc;
+        COUNTER
+    }
+}
+
+
 #[pyclass]
 struct UService {
     #[pyo3(get, set)]
@@ -41,6 +54,7 @@ impl UService {
 #[pymodule]
 fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<UService>()?;
+    m.add_function(wrap_pyfunction!(add_to_count, m)?)?;
 
     Ok(())
 }

@@ -1,6 +1,6 @@
 [package]
 authors = ["PyO3 Authors"]
-name = "service-module"
+name = "service_module"
 version = "0.1.0"
 description = "An example project to get started using PyO3 with maturin"
 edition = "2018"
