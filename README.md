@@ -14,6 +14,25 @@
 
 ![Architecture](docs/Architecture.svg)
 
+## ServiceLib
+
+The only place where state can be shared with both the rust runtime and python runtime to create a single point of knowledge. This is necessary for readyness/liveness data.
+
+## ServiceExec
+This is the service entry point for the runtime exec. It links to the ServiceLib.
+It could link/call to the Service.... But not clear if this is the correct approach. Perhaps it is better to have the ServiceLib perform that operation.
+
+## Service
+This contains the functional logic of the service. It is called by ..... (ServiceLib or ServiceExec  --- Not sure which).
+
+
+## Questions
+1. Should we call Service from ServiceExec or ServiceLib
+If we call Service from ServiceLib then majority of logic is captured into ServiceLib. ServiceExec becomes a very small shim layer into ServiceLib.
+Downside every update to the implementation needs to be done in the ServiceLib
+
+Alternative If we call Service from ServiceExec we make the ServiceLib more complex (exposing Rust API as C-ABI).
+Upside: we can carry some service specific config changes into the ServiceExec layer makeing the coupling less tight.
 
 # Problems
 
