@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="141 147 824 382" width="824" height="382">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="141 67 820 462" width="820" height="462">
   <defs>
     <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="-937.5" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-style="italic" font-weight="700">
       <font-face-src>
@@ -28,7 +28,7 @@
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.19.2\n2021-11-18 23:55:33 +0000</metadata>
+  <metadata> Produced by OmniGraffle 7.19.2\n2021-11-19 00:26:13 +0000</metadata>
   <g id="Canvas_1" stroke-opacity="1" stroke="none" fill="none" fill-opacity="1" stroke-dasharray="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
@@ -42,26 +42,26 @@
         </text>
       </g>
       <g id="Graphic_4">
-        <rect x="142" y="148" width="277" height="241" fill="white"/>
-        <rect x="142" y="148" width="277" height="241" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(147 153)" fill="black">
+        <rect x="142" y="68" width="277" height="241" fill="white"/>
+        <rect x="142" y="68" width="277" height="241" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(147 73)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="700" fill="black" x="0" y="16">SnakeSkin Service SharedLib (.so) </tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="34.46411">C ABI</tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="52.91211">Rust Impl</tspan>
         </text>
       </g>
       <g id="Graphic_2">
-        <rect x="716" y="148" width="248" height="184" fill="white"/>
-        <rect x="716" y="148" width="248" height="184" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(721 153)" fill="black">
+        <rect x="712" y="88" width="248" height="255" fill="white"/>
+        <rect x="712" y="88" width="248" height="255" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(717 93)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="700" fill="black" x="0" y="16">Service Impl</tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="34.46411">Language (Python)</tspan>
         </text>
       </g>
       <g id="Graphic_9">
-        <rect x="159" y="220" width="117" height="123" fill="white"/>
-        <rect x="159" y="220" width="117" height="123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(164 225)" fill="black">
+        <rect x="162" y="143" width="117" height="123" fill="white"/>
+        <rect x="162" y="143" width="117" height="123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(167 148)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="13.889" y="12">Shared State: </tspan>
           <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="21.7865" y="27.364">Rust+Lang</tspan>
           <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="23.1645" y="57.728">Readiness</tspan>
@@ -69,42 +69,58 @@
         </text>
       </g>
       <g id="Line_10">
-        <line x1="480.83444" y1="462" x2="412.37684" y2="395.87784" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line x1="489.75204" y1="462" x2="378.70897" y2="316.8627" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
       <g id="Graphic_11">
-        <rect x="423.7005" y="409.15806" width="34.304" height="28.447998" fill="white"/>
-        <text transform="translate(426.0285 414.15806)" fill="black">
+        <rect x="410.67447" y="366.83703" width="34.304" height="28.447998" fill="white"/>
+        <text transform="translate(413.00247 371.83703)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="5222489e-19" y="15">Link</tspan>
         </text>
       </g>
       <g id="Graphic_12">
-        <rect x="640" y="462" width="248" height="55" fill="white"/>
-        <rect x="640" y="462" width="248" height="55" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(645 467)" fill="black">
+        <rect x="537" y="462" width="248" height="55" fill="white"/>
+        <rect x="537" y="462" width="248" height="55" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(542 467)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="700" fill="black" x="0" y="16">Service Bindings</tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="34.46411">Language (Python - Pyo3)</tspan>
         </text>
       </g>
       <g id="Line_13">
-        <line x1="587" y1="244.92308" x2="428.87084" y2="257.08686" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path d="M 656.6946 220 C 650.9452 199.65856 633.6581 179.54204 592 169 C 548.1859 157.91236 486.0832 159.60997 428.8437 165.29568" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
       <g id="Graphic_14">
-        <rect x="477.82905" y="236.9836" width="54.94404" height="28.447998" fill="white"/>
-        <text transform="translate(482.82905 241.9836)" fill="black">
+        <rect x="529.73285" y="148.83731" width="54.94404" height="28.447998" fill="white"/>
+        <text transform="translate(534.73285 153.83731)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="7.648021" y="15">Link</tspan>
         </text>
       </g>
       <g id="Line_15">
-        <line x1="772.37675" y1="462" x2="809.0912" y2="341.4704" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line x1="659.28125" y1="462" x2="652.4613" y2="352.8807" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
       <g id="Graphic_17">
-        <rect x="587" y="148" width="128" height="184" fill="white"/>
-        <rect x="587" y="148" width="128" height="184" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(592 153)" fill="black">
+        <rect x="584" y="220" width="128" height="123" fill="white"/>
+        <rect x="584" y="220" width="128" height="123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(589 225)" fill="black">
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="700" fill="black" x="0" y="16">SnakeSkin API</tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="34.46411">Language </tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="52.91211">(Python)</tspan>
           <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="71.36011">Impl Rust (Pyo3)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <rect x="571.1538" y="409.5132" width="171.472" height="28.447998" fill="white"/>
+        <text transform="translate(576.1538 414.5132)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="781597e-18" y="15">Call: from ServiceExec</tspan>
+        </text>
+      </g>
+      <g id="Line_19">
+        <line x1="419" y1="223.54898" x2="584" y2="265.30408" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_20">
+        <rect x="468.0215" y="223.65415" width="88.10303" height="46.895996" fill="white"/>
+        <text transform="translate(473.0215 228.65415)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="4.6755137" y="15">Call: from </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="1.5715137" y="33.448">ServiceLib</tspan>
         </text>
       </g>
     </g>
