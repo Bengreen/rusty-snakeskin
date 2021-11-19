@@ -10,6 +10,11 @@
     * [ ] Call methods on that object to hit the rust APIs
 
 
+# Architecture Diagrams
+
+![Architecture](docs/architecture.svg)
+
+
 # Problems
 
 How can i load the rust program (binary -- probably static) and have it accessible from python whilst sharing the same library object code as the rust binary.
