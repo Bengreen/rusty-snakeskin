@@ -12,7 +12,7 @@
 
 # Architecture Diagrams
 
-![Architecture](docs/architecture.svg)
+![Architecture](docs/Architecture.svg)
 
 
 # Problems
